@@ -7,6 +7,7 @@ from .colors import Color, TextColor
 MAX_WIDTH = '1000px'
 
 class Size(Enum):
+    ZERO = '0px !important'
     SMALL = '0.5em'
     MEDIUM = '0.8em'
     DEFAULT = '1em'
@@ -39,7 +40,7 @@ BASE_STYLE = {
 }
 
 max_width_style = dict(
-    align_items='start',
+    align_items='center',
     padding_x=Size.BIG.value,
     width='100%',
     max_width=MAX_WIDTH

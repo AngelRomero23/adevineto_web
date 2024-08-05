@@ -3,6 +3,8 @@ import wep_app.styles.styles as styles
 from wep_app.styles.styles import Size
 from wep_app.views.navbar import navbar
 from wep_app.views.header import header
+from wep_app.views.instructions import instructions
+from wep_app.views.footer import footer
 
 
 def index() -> rx.Component:
@@ -11,8 +13,8 @@ def index() -> rx.Component:
         rx.center(
             rx.vstack(
                 header(),
-                header(),
-                header(),
+                instructions(),
+                footer(),
                 width='100%',
                 align='center',
                 spacing=Size.VERY_BIG.value
