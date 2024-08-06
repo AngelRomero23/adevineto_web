@@ -29,10 +29,12 @@ BASE_STYLE = {
     rx.link: {
         'text_decoration':'none',
     },
-    '.hover-link':{':hover':{
-        'color': TextColor.ACCENT.value,
-        'text_decoration':'none'
-    }},
+    '.hover-link':{
+        ':hover':{
+            'color': TextColor.ACCENT.value,
+            'text_decoration':'none'
+        }
+    },
     rx.text.span: {
         'font_size':Size.MEDIUM.value
     },

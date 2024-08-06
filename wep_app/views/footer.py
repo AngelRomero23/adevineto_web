@@ -19,7 +19,8 @@ def footer() -> rx.Component:
                 href=constants.MOUREDEV_URL,
                 is_external=True,
                 font_size=Size.MEDIUM.value,
-                color=TextColor.TERTIARY.value
+                color=TextColor.TERTIARY.value,
+                class_name='hover-link'
             ),
             align_items='start',
             spacing=Size.MEDIUM.value
