@@ -41,7 +41,8 @@ def header() -> rx.Component:
                     is_external=True,
                     color=TextColor.TERTIARY.value,
                     padding_top=Size.BIG.value,
-                    font_size=Size.MEDIUM.value
+                    font_size=Size.MEDIUM.value,
+                    class_name='hover-link'
                 ),
                 align_items='start'
             ),

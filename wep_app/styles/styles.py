@@ -28,13 +28,22 @@ BASE_STYLE = {
     },
     rx.link: {
         'text_decoration':'none',
-        '_hover': {
-            'color': TextColor.ACCENT.value,
-            'text_decoration':'none'
-        }
     },
+    '.hover-link':{':hover':{
+        'color': TextColor.ACCENT.value,
+        'text_decoration':'none'
+    }},
     rx.text.span: {
         'font_size':Size.MEDIUM.value
+    },
+    '.btn-nes-custom':{
+        'margin_bottom':Size.DEFAULT.value,
+        'height':'2.75em',
+        'color':TextColor.SECONDARY.value,
+        'padding_top':Size.ZERO.value,
+        ':hover': {
+            'color': TextColor.PRIMARY.value
+        }
     }
     
 }

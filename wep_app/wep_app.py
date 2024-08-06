@@ -18,7 +18,7 @@ def index() -> rx.Component:
                 width='100%',
                 align='center',
                 spacing=Size.VERY_BIG.value
-            )
+            ),
         )
         
     )
