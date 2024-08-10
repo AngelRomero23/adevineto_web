@@ -5,6 +5,8 @@ from wep_app.views.navbar import navbar
 from wep_app.views.header import header
 from wep_app.views.instructions import instructions
 from wep_app.views.footer import footer
+from wep_app.views.author import author
+from wep_app.views.partners import partners
 
 
 def index() -> rx.Component:
@@ -14,6 +16,8 @@ def index() -> rx.Component:
             rx.vstack(
                 header(),
                 instructions(),
+                author(),
+                partners(),
                 footer(),
                 width='100%',
                 align='center',

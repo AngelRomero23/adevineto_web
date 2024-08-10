@@ -3,6 +3,7 @@ MOUREDEV_URL = "https://moure.dev"
 
 YOUTUBE_URL='https://youtube.com/@mouredev'
 TWITCH_URL='https://twitch.tv/mouredev'
+DISCORD_URL = "https://discord.gg/mouredev"
 GITHUB_URL='https://github.com/mouredev'
 TWITTER_URL = "https://twitter.com/mouredev"
 

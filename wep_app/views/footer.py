@@ -30,7 +30,6 @@ def footer() -> rx.Component:
             alt='Logo Mouredev. Una letra "m" entre dos corchetes.',
             class_name='nes-avatar is-large'
         ),
-        padding_botton=Size.BIG.value,
-        align_items='center',
+        padding_bottom=Size.BIG.value,
         style=styles.max_width_style
     )
