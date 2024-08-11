@@ -7,6 +7,7 @@ from wep_app.views.instructions import instructions
 from wep_app.views.footer import footer
 from wep_app.views.author import author
 from wep_app.views.partners import partners
+from wep_app.views.calendar import calendar
 
 
 def index() -> rx.Component:
@@ -17,6 +18,7 @@ def index() -> rx.Component:
                 header(),
                 instructions(),
                 author(),
+                calendar(),
                 partners(),
                 footer(),
                 width='100%',
