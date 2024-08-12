@@ -17,8 +17,8 @@ def index() -> rx.Component:
             rx.vstack(
                 header(),
                 instructions(),
-                author(),
                 calendar(),
+                author(),
                 partners(),
                 footer(),
                 width='100%',

@@ -5,24 +5,8 @@ import wep_app.styles.styles as styles
 from wep_app.styles.styles import Size, TextColor, Color
 from wep_app.components.header_text import header_text
 from wep_app.components.button import button
-from datetime import datetime, timezone
+from wep_app.components.countdown import background_task    
 
-
-
-        
-class State(rx.State):
-
-    countdown: str
-
-    def update_countdown(self):
-        target_date = datetime(2024, 12, 31)
-        now = datetime.now()
-        time_left = target_date - now
-        days_left = time_left.days
-        hours_left = time_left.seconds // 3600
-        minutes_left = (time_left.seconds % 3600) // 60
-        seconds_left = time_left.seconds % 60
-        self.countdown = f"{days_left} días, {hours_left} horas, {minutes_left} minutos y {seconds_left} segundos"
 
 
 def calendar() -> rx.Component:
@@ -34,13 +18,21 @@ def calendar() -> rx.Component:
         ),
         rx.vstack(
             rx.hstack(
-                rx.text(
-                    'El evento comienza en'
-                ),
-                rx.text(
-                    State.countdown,
-                    on_mount=State.update_countdown
-                )
-            )
-        )
+                rx.text('El evento comienza en'),
+                background_task()
+            ),
+            button(
+                'Recordar',
+                constants.DISCORD_EVENT_URL
+            ),
+            rx.text.span(
+                "• Los regalos son sorpresa, permanecerán ocultos hasta el día de su publicación. No olvides pasarte por aquí cada día para descubrir un nuevo sorteo."
+            ),
+            rx.text.span(
+                "• Puedes seleccionar cada regalo para conocer a los ganadores una vez se haya publicado el nuevo sorteo (aparecerá en rojo)."
+            ),
+            class_name='nes-container is-dark' 
+        ),
+        style=styles.max_width_style,
+        class_name='calendar-container'
     )
