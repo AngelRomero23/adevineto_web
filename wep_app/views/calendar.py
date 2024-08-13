@@ -33,6 +33,12 @@ def calendar() -> rx.Component:
             ),
             class_name='nes-container is-dark' 
         ),
+        rx.grid(
+            rx.foreach(
+                list(range(1,25))
+            ),
+            columns=[3,3,4,5,6]
+        ),
         style=styles.max_width_style,
         class_name='calendar-container'
     )
