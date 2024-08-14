@@ -1,6 +1,7 @@
 import reflex as rx
 import wep_app.styles.styles as styles
 from wep_app.styles.styles import Size
+from wep_app.components.github import github
 from wep_app.views.navbar import navbar
 from wep_app.views.header import header
 from wep_app.views.instructions import instructions
@@ -12,6 +13,7 @@ from wep_app.views.calendar import calendar
 
 def index() -> rx.Component:
     return rx.box(
+        rx.script(src='/js/snow.js'),
         navbar(),
         rx.center(
             rx.vstack(
@@ -21,6 +23,7 @@ def index() -> rx.Component:
                 author(),
                 partners(),
                 footer(),
+                github(),
                 width='100%',
                 align='center',
                 spacing=Size.VERY_BIG.value

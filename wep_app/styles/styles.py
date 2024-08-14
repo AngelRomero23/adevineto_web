@@ -99,9 +99,24 @@ BASE_STYLE = {
         'color':TextColor.SECONDARY.value 
         },
         'padding_bottom':Size.BUTTON.value
+    },
+    '.container-gifts':{
+        'position':'absolute'
+    },
+    '.grid-container':{
+        'width':'100%',
+        'padding_top':Size.BIG.value
+    },
+    '.githubrepo-container':{
+        'align_items':"end",
+        'display':"flex",
+        'margin_top':'7em'
+    },
+    '.octocat-container':{
+        'align_items':'start',
+        'margin_bottom':Size.BIG.value
     }
-    
-    
+        
 }
 
 

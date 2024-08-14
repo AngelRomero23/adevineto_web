@@ -1,11 +1,11 @@
 import reflex as rx
-import time
 import wep_app.constants as constants
 import wep_app.styles.styles as styles
 from wep_app.styles.styles import Size, TextColor, Color
 from wep_app.components.header_text import header_text
 from wep_app.components.button import button
-from wep_app.components.countdown import background_task    
+from wep_app.components.countdown import background_task
+from wep_app.components.day import day    
 
 
 
@@ -35,9 +35,15 @@ def calendar() -> rx.Component:
         ),
         rx.grid(
             rx.foreach(
-                list(range(1,25))
+                list(range(1,25)), 
+                lambda number:
+                day(
+                    number
+                )
             ),
-            columns=[3,3,4,5,6]
+            columns=rx.breakpoints(initial="3",xs='3', sm="4",md='5', lg="6"),
+            spacing=Size.DEFAULT.value,
+            class_name='grid-container'
         ),
         style=styles.max_width_style,
         class_name='calendar-container'
