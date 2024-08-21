@@ -13,8 +13,8 @@ from wep_app.views.calendar import calendar
 
 def index() -> rx.Component:
     return rx.box(
-        rx.script(src='/js/snow.js'),
         navbar(),
+        rx.script(src='/js/snow.js'),
         rx.center(
             rx.vstack(
                 header(),

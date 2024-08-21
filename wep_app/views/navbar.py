@@ -38,7 +38,7 @@ def navbar() -> rx.Component:
         border_bottom=f'0.25em solid {Color.SECONDARY.value[0]}',
         padding_x=Size.BIG.value,
         padding_y=Size.DEFAULT.value,
-        z_index='999',
+        zIndex='999',
         top='0',
         width ='100%'
     )  
